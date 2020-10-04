@@ -1,0 +1,43 @@
+<!-- CREADO POR: MARICEL PAZ -->
+
+<form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>EMPLEADO</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="id..." formControlName="id"  [(ngModel)]="empleado.id">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="codigo..." formControlName="codigo" [(ngModel)]="empleado.codigo">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="nombre..." formControlName="nombre" [(ngModel)]="empleado.nombre">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="salario..." formControlName="salario"[(ngModel)]="empleado.salario">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="creado por..." formControlName="creado_por" [(ngModel)]="empleado.creado_por">
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">Agregar</button>
+      <!--<button mat-raised-button class="btn btn-danger" (click)="ngOnEliminar()" >Eliminar</button>-->
+      <button mat-raised-button color="danger" (click)="ngOnCancelar()" >Cancelar</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

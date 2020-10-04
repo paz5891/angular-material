@@ -1,0 +1,47 @@
+<!-- CREADO POR: MARICEL PAZ -->
+<form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>PRODUCTO FACTURA</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="id..." formControlName="id"  [(ngModel)]="productofactura.id">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="factura_id..." formControlName="factura_id" [(ngModel)]="productofactura.factura_id">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="producto_id..." formControlName="producto_id" [(ngModel)]="productofactura.producto_id">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="cantidad..." formControlName="cantidad"[(ngModel)]="productofactura.cantidad">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="subtotal..." formControlName="subtotal" [(ngModel)]="productofactura.subtotal">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="creado_por..." formControlName="creado_por" [(ngModel)]="productofactura.creado_por">
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">Agregar</button>
+      <!--<button mat-raised-button class="btn btn-danger" (click)="ngOnEliminar()" >Eliminar</button>-->
+      <button mat-raised-button color="danger" (click)="ngOnCancelar()" >Cancelar</button>
+    </mat-card-actions>
+  </mat-card>
+</form>

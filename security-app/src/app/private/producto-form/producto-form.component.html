@@ -1,0 +1,38 @@
+<!-- CREADO POR: MARICEL PAZ -->
+<form [formGroup]="addressForm" novalidate (ngSubmit)="onSubmit()">
+  <mat-card class="shipping-card">
+    <mat-card-header>
+      <mat-card-title>PRODUCTO</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <div class="row">
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="id..." formControlName="id"  [(ngModel)]="producto.id">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="nombre..." formControlName="nombre" [(ngModel)]="producto.nombre">
+          </mat-form-field>
+
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="precio..." formControlName="precio" [(ngModel)]="producto.precio">
+          </mat-form-field>
+        </div>
+        <div class="col">
+          <mat-form-field class="full-width">
+            <input matInput placeholder="creado por..." formControlName="creado_por" [(ngModel)]="producto.creado_por">
+          </mat-form-field>
+        </div>
+      </div>
+    </mat-card-content>
+    <mat-card-actions>
+      <button mat-raised-button color="primary" type="submit">Agregar</button>
+      <!--<button mat-raised-button class="btn btn-danger" (click)="ngOnEliminar()" >Eliminar</button>-->
+      <button mat-raised-button color="danger" (click)="ngOnCancelar()" >Cancelar</button>
+    </mat-card-actions>
+  </mat-card>
+</form>
